@@ -6,15 +6,12 @@ int main()
 {
     int count_increased = 0;
     int last_value = 0;
-    string s_temp;
-    while (cin)
-    {
-        if (cin.eof())
-            break;
-        getline(cin, s_temp);
-        int value = stoi(s_temp);
-        if (value > last_value)
-        {
+    string line;
+    while (getline(cin, line)){
+        if (line.size() == 0)
+           break;
+        int value = stoi(line);
+        if (value > last_value){
             count_increased++;
         }
         last_value = value;
